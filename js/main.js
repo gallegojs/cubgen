@@ -261,7 +261,7 @@ var leerFigura = function(){
 var generarCodigo = function(){
    divframes.empty();
    for(var x=0 in pelicula){
-      var framevisual = $('<div class="col-xs-2"><div class="framevisual">'+((x*1)+1)+'</div></div>');
+      var framevisual = $('<div class="col-xs-3"><div class="framevisual">'+((x*1)+1)+'</div></div>');
       framevisual[0].indicePelicula = x;
       framevisual.on('click', function(){
          $(".framevisual").css("background-color", "transparent");

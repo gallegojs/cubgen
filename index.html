@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <title>Cube Generator</title>
-   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu:700" rel="stylesheet">
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link href="css/estilos.css" rel="stylesheet">
 
@@ -17,7 +17,7 @@
    <![endif]-->
 </head>
 <body>
-   <div class="container">
+   <div class="container-fluid">
       <header>
          <nav class="navbar navbar-default row">
             <div class="container-fluid">
@@ -29,7 +29,21 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+
+                  <div class="logo-animado">
+                    <div class="logo-left">
+                      <div class="logo-led"></div>
+                      <div class="logo-led"></div>
+                    </div>
+                    <div class="logo-name">
+                      cubgen
+                    </div>
+                    <div class="logo-right">
+                      <div class="logo-led"></div>
+                      <div class="logo-led"></div>
+                    </div>
+                  </div>
+
                </div>
 
                <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,7 +54,7 @@
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                      <li class="active"><a href="#">App <span class="sr-only">(current)</span></a></li>
-                     <li><a href="#">¿Qué es esto? <small>prox.</small></a></li>
+                     <li><a href="https://www.youtube.com/watch?v=6mXM-oGggrM" target="_blank">¿Qué es esto?</a></li>
                      <li><a href="#">Fabricar un cubo <small>prox.</small></a></li>
                      <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ejemplos<span class="caret"></span></a>
@@ -53,14 +67,22 @@
                            <li><a href="#">Compartidos por la comunidad <small>prox.</small></a></li>
                         </ul>
                      </li>
+                     <li><a href="https://github.com/jgallegoweb/cubgen"><img width="25" src="http://www.jgallegoweb.com/wp-content/themes/portfolio4/img/github-negro.svg"></a></li>
                   </ul>
                </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
          </nav>
       </header>
       <div id="programa" class="row">
-
-         <div class="col-md-7">
+        <div class="col-md-3">
+        <h2>Código generado</h2>
+        <p>Copia los dos bloques de código siguientes en un nuevo proyecto de arduino. El primer bloque contiene la "película" y el segundo bloque es el código que la reproduce (no necesita ser sustituido ante cambios en la película). </p>
+        <h3>Película</h3>
+        <pre><code id="film"></code></pre>
+        <h3>Reproductor</h3>
+        <pre><code id="code"></code></pre>
+      </div>
+         <div class="col-md-6">
             <h2>Editor</h2>
 
             <div class="editor">
@@ -97,8 +119,7 @@
 
 
             </div>
-
-            <div class="col-md-5">
+            <div class="col-md-3">
                <div class="linea-temporal">
                   <h2>Línea de tiempo</h2>
                   <div class="container-fluid">
@@ -108,13 +129,10 @@
                   </div>
                </div>
             </div>
-         </div>
-         <h2>Código generado</h2>
-         <p>Copia los dos bloques de código siguientes en un nuevo proyecto de arduino. El primer bloque contiene la "película" y el segundo bloque es el código que la reproduce (no necesita ser sustituido ante cambios en la película). </p>
-         <h3>Película</h3>
-         <pre><code id="film"></code></pre>
-         <h3>Reproductor</h3>
-         <pre><code id="code"></code></pre>
+
+
+
+       </div>
          <footer>
             <p>Copyright &copy; 2016 Javier Gallego (<a href="http://jgallegoweb.com" target="_blank">jgallegoweb.com</a>)</p>
          </footer>
